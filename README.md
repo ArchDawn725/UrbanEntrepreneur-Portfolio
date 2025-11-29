@@ -4,7 +4,7 @@
 
 Large Colony/Management Simulator • Published on Steam (April 2024)
 
-Steam Page
+Steam Page: https://store.steampowered.com/app/2648080/Urban_Entrepreneur
 
 Availability: Paid (Steam key available upon request)
 
