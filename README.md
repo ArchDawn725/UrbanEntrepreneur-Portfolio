@@ -1,187 +1,190 @@
-# UrbanEntrepreneur-Portfolio
-
-**Urban Entrepreneur (2024)**
+# **Urban Entrepreneur (2024)**
 
 Large Colony/Management Simulator • Published on Steam (April 2024)
 
-Steam Page: https://store.steampowered.com/app/2648080/Urban_Entrepreneur
+*Steam Page:* https://store.steampowered.com/app/2648080/Urban_Entrepreneur
 
-Availability: Paid (Steam key available upon request)
+*Availability:* Paid (Steam key available upon request)
 
-**⭐ Project Overview**
+# **⭐ Project Overview**
 
 Urban Entrepreneur is a large-scale colony/management simulator inspired by titles like RimWorld—but reimagined through the lens of modern retail psychology and real-world sales tactics used by industry giants such as Walmart. The project was the major focus of my 2023–2024 development year and represents the beginning of my high standards in architecture, gameplay system design, and production-ready engineering practices.
 
 Development began shortly after Clay Soldiers with the goal of preparing a polished prototype for the University of Tulsa Global Game Jam Competition. The prototype won 1st Place in the 2023 Professional Category, open worldwide to all non-student participants. Before awards were announced, I hosted a booth for two days; despite having no tutorial at the time, the game retained players for 30–60 minutes, proving the strength and clarity of its core systems.
 
-Urban Entrepreneur released on Steam in April 2024.
+*Urban Entrepreneur released on Steam in April 2024.*
 
-**🎮 Gameplay Summary**
-*Start Screen & Progression*
+# **🎮 Gameplay Summary**
 
-Players begin with:
+## **Start Screen & Progression**
 
-A cinematic, pre-recorded start menu
+### Players begin with:
 
-10 base maps
+-A cinematic, pre-recorded start menu
 
-3 base difficulties
+-10 base maps
 
-Map completion tracking by difficulty
+-3 base difficulties
 
-Upon selecting the first map, players enter a barren store with one worker—the Manager—and are guided through a comprehensive interactive tutorial that demonstrates:
+-Map completion tracking by difficulty
 
-Building shelves, structures, and checkout machines
+### Upon selecting the first map, players enter a barren store with one worker—the Manager—and are guided through a comprehensive interactive tutorial that demonstrates:
 
-Hiring employees and scheduling shifts
+-Building shelves, structures, and checkout machines
 
-Managing employee stress and personality traits
+-Hiring employees and scheduling shifts
 
-Understanding the calendar and seasonal events
+-Managing employee stress and personality traits
 
-Ordering stock with varying decay rates, values, and seasonal demands
+-Understanding the calendar and seasonal events
 
-Adjusting play speed via a custom Tick System
+-Ordering stock with varying decay rates, values, and seasonal demands
 
-*Core Loop*
+-Adjusting play speed via a custom Tick System
 
-The simulation runs on a detailed economy and behavioral ecosystem:
+## *Core Loop*
 
-Employees (manager, stockers, janitors, engineers, boss) have stress, traits, job roles, and schedules
+### The simulation runs on a detailed economy and behavioral ecosystem:
 
-Customers individually search for desired items, shop based on needs, respond to environment, and use self-checkout
+-Employees (manager, stockers, janitors, engineers, boss) have stress, traits, job roles, and schedules
 
-Stockers and managers restock shelves based on store settings and item popularity
+-Customers individually search for desired items, shop based on needs, respond to environment, and use self-checkout
 
-Weather, random events, store policies, and marketing influence customer volume and behavior
+-Stockers and managers restock shelves based on store settings and item popularity
 
-Difficulty escalates through more complex items, demand curves, and external factors
+-Weather, random events, store policies, and marketing influence customer volume and behavior
 
-To win a level, the player must complete map-specific objectives—such as earning a cumulative $100,000 on Map 1.
+-Difficulty escalates through more complex items, demand curves, and external factors
 
-**Advanced Systems**
+*To win a level, the player must complete map-specific objectives—such as earning a cumulative $100,000 on Map 1.*
 
-Later maps introduce:
+## **Advanced Systems**
 
-Competitor stores
+### Later maps introduce:
 
-Heating & cooling systems
+-Competitor stores
 
-Store temperature control
+-Heating & cooling systems
 
-Adjustable music & volume (affecting customer behavior)
+-Store temperature control
 
-Seasonal demand curves
+-Adjustable music & volume (affecting customer behavior)
 
-Advertising strategies & marketing boosts
+-Seasonal demand curves
 
-Store hours customization
+-Advertising strategies & marketing boosts
 
-Multiple new items across categories (electronics, clothing, produce, etc.)
+-Store hours customization
 
-**🧩 Key Features**
+-Multiple new items across categories (electronics, clothing, produce, etc.)
 
-Large-scale colony/retail simulation
+# **🧩 Key Features**
 
-Fully moddable data system (maps, items, names, structures, etc.)
+-Large-scale colony/retail simulation
 
-Mod folders auto-generated on startup
+-Fully moddable data system (maps, items, names, structures, etc.)
 
-JSON-based save/load system (player-editable if desired)
+-Mod folders auto-generated on startup
 
-Advanced employee and customer state machines
+-JSON-based save/load system (player-editable if desired)
 
-Point-based AI decision system
+-Advanced employee and customer state machines
 
-Custom A* pathfinding
+-Point-based AI decision system
 
-Memory system for customers (stores past item locations)
+-Custom A* pathfinding
 
-Animated and resolution-independent UI system
+-Memory system for customers (stores past item locations)
 
-Tick-based gameplay loop to control simulation pacing
+-Animated and resolution-independent UI system
 
-Complex economy with demand decay, product lifespans, and variable buy/sell prices
+-Tick-based gameplay loop to control simulation pacing
 
-**🏗️ Architecture Overview**
+-Complex economy with demand decay, product lifespans, and variable buy/sell prices
 
-Urban Entrepreneur marks one of your most advanced architectural achievements prior to 2025. It introduced multiple high-complexity systems that interact simultaneously across hundreds of agents and objects.
+# **🏗️ Architecture Overview**
 
-**Major Architectural Highlights**
+**Urban Entrepreneur marks one of my most advanced architectural achievements prior to 2025. It introduced multiple high-complexity systems that interact simultaneously across hundreds of agents and objects.**
 
-*State Machines*
+## **Major Architectural Highlights**
+
+**State Machines**
+
 Employees, customers, and officers use layered state machines to handle searching, shopping, waiting, routing, work tasks, and breaks.
 
-*A Pathfinding**
+**A Pathfinding**
+
 Used extensively to ensure believable navigation in crowded store environments.
 
-*Tick System*
-A custom timing system controlling:
+**Tick System**
 
-Game clock advancement
+### A custom timing system controlling:
 
-Customer/employee updates
+-Game clock advancement
 
-Product decay
+-Customer/employee updates
 
-Event triggers
+-Product decay
 
-Stocking logic
+-Event triggers
 
-(Note: Later levels can produce lag spikes when too many agents update simultaneously—this is a key target for future refactoring.)
+-Stocking logic
 
-*Point-Based AI*
-Characters evaluate actions based on weighted desirability, including:
+*(Note: Later levels can produce lag spikes when too many agents update simultaneously—this is a key target for future refactoring.)*
 
-Work tasks
+## *Point-Based AI*
 
-Item retrieval
+### Characters evaluate actions based on weighted desirability, including:
 
-Checkout decisions
+-Work tasks
 
-Employee stress & break behavior
+-Item retrieval
 
-*Memory System*
+-Checkout decisions
+
+-Employee stress & break behavior
+
+**-Memory System**
+
 Customers remember item positions and use that information in subsequent searches.
 
-*Modding / Data System*
-A folder is auto-created on startup containing JSON templates for:
+## **Modding / Data System**
 
-Items
+### A folder is auto-created on startup containing JSON templates for:
 
-Structures
+-Items
 
-Maps
+-Structures
 
-Names
+-Maps
 
-Store settings
+-Names
 
-Users can edit these or add new content easily.
+-Store settings
 
-*UI / UX Architecture*
+*Users can edit these or add new content easily.*
 
-Animated UI components
+## *UI / UX Architecture*
 
-Dynamic layout scaling
+-Animated UI components
 
-Camera-based cinematic menus
+-Dynamic layout scaling
 
-*Code Quality Notes*
+-Camera-based cinematic menus
 
-Urban Entrepreneur maintains your improvements from Clay Soldiers while continuing to push scope and complexity. Although a few “god scripts” remain, the architecture is significantly more disciplined and modular.
+### *Code Quality Notes*
 
-**🗂️ Key Scripts to Review**
+*Urban Entrepreneur maintains improvements from Clay Soldiers while continuing to push scope and complexity. Although a few “god scripts” remain, the architecture is significantly more disciplined and modular.*
 
-(Exact file names can be mapped once the repo is uploaded.)
+# **🗂️ Key Scripts to Review**
 
-*Core*
+### *Core*
 
 GameBootstrap — initializes maps, agents, and store systems
 
 TickSystem — core gameplay pacing
 
-*Systems*
+### *Systems*
 
 EmployeeStateMachine — work, stress, and task decisions
 
@@ -193,7 +196,7 @@ TemperatureSystem — heating/cooling interactions
 
 MarketingSystem — advertisements, boosts
 
-*Managers*
+### *Managers*
 
 SaveLoadManager — JSON save/load
 
@@ -201,7 +204,7 @@ ModDataManager — loads player-created content
 
 StoreManager — handles objectives, inventory, employees
 
-*AI*
+### *AI*
 
 CustomerMemory — remembers item placement
 
@@ -209,7 +212,7 @@ AIDecisionSystem — weighted task selection
 
 PathfindingController — A* movement
 
-*UI*
+### *UI*
 
 AnimatedStartMenu
 
@@ -219,88 +222,89 @@ CheckoutUI
 
 WorkScheduleUI
 
-**🧪 Development Notes**
-*Competition & Public Testing*
+# **🧪 Development Notes**
 
-Won 1st Place in the University of Tulsa’s 2023 Global Game Jam professional category
+## **Competition & Public Testing**
 
-Extremely high player retention at booth events
+-Won 1st Place in the University of Tulsa’s 2023 Global Game Jam professional category
 
-Easily understood after a brief tutorial
+-Extremely high player retention at booth events
 
-Strong engagement despite competitors’ games nearby
+-Easily understood after a brief tutorial
 
-*Performance Considerations*
+-Strong engagement despite competitors’ games nearby
 
-Tick-based update system minimizes heavy Update calls
+## *Performance Considerations*
 
-Most simulation operations occur in batches
+-Tick-based update system minimizes heavy Update calls
 
-Modular components allow selective updates
+-Most simulation operations occur in batches
 
-*Modding*
+-Modular components allow selective updates
 
-Fully moddable via external JSON
+## *Modding*
 
-Supports community-driven expansions
+-Fully moddable via external JSON
 
-Allows players to adjust values, add new items, or alter maps
+-Supports community-driven expansions
 
-*Behavior & Interaction*
+-Allows players to adjust values, add new items, or alter maps
 
-Employee stress system
+## *Behavior & Interaction*
 
-Customer needs & purchase logic
+-Employee stress system
 
-Store amenities affect customer flow
+-Customer needs & purchase logic
 
-Seasonal behavior affects item demand
+-Store amenities affect customer flow
 
-**🚧 Why This Project Matters**
+-Seasonal behavior affects item demand
 
-Urban Entrepreneur is a milestone project that demonstrates:
+# **🚧 Why This Project Matters**
 
-Your ability to create large, interconnected simulation systems
+## Urban Entrepreneur is a milestone project that demonstrates:
 
-Your maturity in game architecture and data modeling
+-My ability to create large, interconnected simulation systems
 
-The successful launch of a complex game on Steam
+-My maturity in game architecture and data modeling
 
-Strong AI logic design using multi-layered decision systems
+-The successful launch of a complex game on Steam
 
-The beginning of your consistent engineering style:
+-Strong AI logic design using multi-layered decision systems
 
-clean architecture
+### The beginning of my consistent engineering style:
 
-custom tooling
+-clean architecture
 
-performance-first
+-custom tooling
 
-modding-aware design
+-performance-first
 
-Your capability to produce professional-level titles solo
+-modding-aware design
 
-Long-term vision executed across multiple systems, maps, and agents
+-My capability to produce professional-level titles solo
 
-It is one of the clearest examples of your growth toward senior-level Unity development.
+-Long-term vision executed across multiple systems, maps, and agents
 
-**📚 Lessons Learned**
+-It is one of the clearest examples of my growth toward senior-level Unity development.
 
-Even well-designed tick systems require load-balancing at scale
+# **📚 Lessons Learned**
 
-Modding support introduces long-term flexibility and community engagement
+-Even well-designed tick systems require load-balancing at scale
 
-Players benefit greatly from well-structured tutorials
+-Modding support introduces long-term flexibility and community engagement
 
-Seasonal economies and behavioral systems create deep replayability
+-Players benefit greatly from well-structured tutorials
 
-God scripts must eventually be replaced by modular architecture
+-Seasonal economies and behavioral systems create deep replayability
 
-AI memory systems significantly improve immersion
+-God scripts must eventually be replaced by modular architecture
 
-**🛠️ Tech Stack**
+-AI memory systems significantly improve immersion
 
-Unity 2022.x
+# **🛠️ Tech Stack**
+
+Unity 2022.3
 
 C#
 
