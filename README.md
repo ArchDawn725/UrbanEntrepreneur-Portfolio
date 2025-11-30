@@ -178,49 +178,84 @@ Customers remember item positions and use that information in subsequent searche
 
 # **🗂️ Key Scripts to Review**
 
-### *Core*
+## *Core*
 
-GameBootstrap — initializes maps, agents, and store systems
+*TickSystem.cs*
 
-TickSystem — core gameplay pacing
+## *Systems*
 
-### *Systems*
+*MyGrid.cs*
 
-EmployeeStateMachine — work, stress, and task decisions
+*MapController.cs*
 
-CustomerStateMachine — item searching, checkout, and routing
+*Controller.cs*
 
-ItemDecaySystem — manages spoilage and demand
+*OrderManager.cs*
 
-TemperatureSystem — heating/cooling interactions
+*CalanderController.cs*
 
-MarketingSystem — advertisements, boosts
+*Competitor.cs*
 
-### *Managers*
+*Employee2.cs*
 
-SaveLoadManager — JSON save/load
+## *AI*
 
-ModDataManager — loads player-created content
+*C_FindShelf.cs*
 
-StoreManager — handles objectives, inventory, employees
+*C_GenerateShoppingList.cs*
 
-### *AI*
+*E_SetTarget.cs*
 
-CustomerMemory — remembers item placement
+*E_Working.cs*
 
-AIDecisionSystem — weighted task selection
+*E_Moving.cs*
 
-PathfindingController — A* movement
+*E_FindStockPile.cs*
 
-### *UI*
+*E_AtDestination.cs*
 
-AnimatedStartMenu
+*E_FindItem.cs*
 
-TutorialUI
+*C_ClaimItem.cs*
 
-CheckoutUI
+## *UI*
 
-WorkScheduleUI
+*ListExtensions.cs*
+
+*Sorter.cs*
+
+*SpecializedSorter.cs*
+
+*UICharacter.cs*
+
+*UITabController.cs*
+
+*UIController.cs*
+
+*ChatMessage.cs*
+
+## *Modding Support*
+
+*Names.cs*
+
+*PersonVisualCon.cs*
+
+*SaveController.cs*
+
+*StartController.cs*
+
+## *Tools*
+
+*RectTransformCopyPaste.cs*
+
+*AutoLocalizer.cs*
+
+*GridOrganizer.cs*
+
+*HeatMap.cs*
+
+*StockZone.cs*
+
 
 # **🧪 Development Notes**
 
